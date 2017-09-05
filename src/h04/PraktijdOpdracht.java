@@ -27,7 +27,7 @@ public class PraktijdOpdracht extends Applet {
         //Afgeronde rechthoek
         g.setColor(Color.black);
         g.drawString("Afgeronde rechthoek",60,275);
-        g.drawRoundRect(20,160,180,100,20,20);
+        g.drawRoundRect(20,160,180,100,30,30);
         //Gevulde ovaal
         g.drawString("Gevulde ovaal",270,275);
         g.setColor(Color.magenta);
