@@ -6,13 +6,12 @@ import java.awt.*;
 
 public class Staafdiagram extends Applet {
 
-    int gewicht;
     int breedte;
+
 
     public void init() {
 
-        breedte = 50;
-        gewicht = 50;
+
     }
 
 

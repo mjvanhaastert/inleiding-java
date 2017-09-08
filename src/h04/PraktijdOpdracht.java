@@ -37,5 +37,7 @@ public class PraktijdOpdracht extends Applet {
         g.drawString("Cirkel",495,275);
         g.drawOval(460,160,100,100);
 
+        
+
     }
 }

@@ -41,7 +41,31 @@ public class Show extends Applet{
         g.fillRect(202,205,50,5);
         g.setColor(Color.blue);
         g.fillRect(202,210,50,5);
+
+
+        //welke kleur staaf diagram bij welke persoon hoort
+
+        g.setColor(Color.red);
+        g.fillRect(300,130,10,10 );
+        g.setColor(Color.red);
+        g.drawString("Valerie 40kg",320,140);
+
+        g.setColor(Color.yellow);
+        g.fillRect(300,150,10,10 );
+        g.setColor(Color.yellow);
+        g.drawString("Jeroen 100kg",320,160);
+
+        g.setColor(Color.blue);
+        g.fillRect(300,170,10,10 );
+        g.setColor(Color.blue);
+        g.drawString("Hans 80kg",320,180);
     }
+
+
+
+
+
+
 
 
 
