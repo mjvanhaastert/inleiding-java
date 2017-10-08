@@ -19,7 +19,7 @@ public class opdr81 extends Applet {
 
         tekstvlak = new TextField("", 20);
         knop1 = new Button("Oke");
-        knop1.addActionListener(new Knop1Listerner());
+        knop1.addActionListener(new Knop1Listener());
         knop2 = new Button("reset");
         knop2.addActionListener(new Knop2Listener());
         add(tekstvlak);
@@ -29,11 +29,12 @@ public class opdr81 extends Applet {
 
     public void paint(Graphics g) {
         g.drawString("", 60, 70);
+
     }
 
-    private class Knop1Listerner implements ActionListener {
+    private class Knop1Listener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            tekstvlak.getText(tekstvlak);
+            tekstvlak.getText();
             repaint();
         }
     }
