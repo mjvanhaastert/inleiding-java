@@ -14,6 +14,7 @@ public class opdr81 extends Applet {
     Button knop1;
     Button knop2;
     TextField tekstvlak;
+    String schermtekst;
 
     public void init() {
 
@@ -28,13 +29,13 @@ public class opdr81 extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawString("", 60, 70);
+        g.drawString(schermtekst, 60, 70);
 
     }
 
     private class Knop1Listener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            tekstvlak.getText();
+            schermtekst = tekstvlak.getText();
             repaint();
         }
     }
