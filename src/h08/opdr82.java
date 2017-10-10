@@ -9,53 +9,31 @@ package h08;
 
 import java.applet.Applet;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class opdr82 extends Applet{
 
     Button knopm;
     Button knopv;
-    Button knopml;
-    Button knopvl;
+    Button knopmll;
+    Button knopvll;
 
-    String m;
-    String v;
-    String ml;
-    String vl;
+    int man;
+    int vrouw;
+    int manl;
+    int vrouwl;
+    int totaal;
 
-    double a;
-    double b;
-    double c;
-    double d;
 
     public void init() {
 
         knopm = new Button("Man");
-        knopm.addActionListener(new KnopmListener());
-        knopv = new Button("Vrouw");
-        knopv.addActionListener(new KnopvListener());
-        knopml = new Button("Leerling Man");
-        knopml.addActionListener(new KnopmlListener());
-        knopvl = new Button("Leering Vrouw");
-        knopvl.addActionListener(new KnopvlListener());
-    }
+        knopm.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-    public void paint(Graphics g){
-        g.drawString("Aantal Mannen",60,40);
-        g.drawString("Aantal Vrouwen",60,60);
-        g.drawString("Aantal Manlijke leerlingen",60,80);
-        g.drawString("Aantal Vrouwlijke leerlingen",60,100);
-    }
 
-    private class KnopmListener implements ActionListener {
-    }
 
-    private class KnopvListener implements ActionListener {
-    }
-
-    private class KnopmlListener implements ActionListener {
-    }
-
-    private class KnopvlListener implements ActionListener {
-    }
-}
+            }
+        });
