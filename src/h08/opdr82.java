@@ -23,6 +23,11 @@ public class opdr82 extends Applet{
     String ml;
     String vl;
 
+    double a;
+    double b;
+    double c;
+    double d;
+
     public void init() {
 
         knopm = new Button("Man");
@@ -36,10 +41,10 @@ public class opdr82 extends Applet{
     }
 
     public void paint(Graphics g){
-        g.drawString(m,60,40);
-        g.drawString(v,60,60);
-        g.drawString(ml,60,80);
-        g.drawString(vl,60,100);
+        g.drawString("Aantal Mannen",60,40);
+        g.drawString("Aantal Vrouwen",60,60);
+        g.drawString("Aantal Manlijke leerlingen",60,80);
+        g.drawString("Aantal Vrouwlijke leerlingen",60,100);
     }
 
     private class KnopmListener implements ActionListener {
@@ -54,4 +59,3 @@ public class opdr82 extends Applet{
     private class KnopvlListener implements ActionListener {
     }
 }
-
