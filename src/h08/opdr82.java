@@ -12,18 +12,18 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class opdr82 extends Applet{
+public class opdr82 extends Applet {
 
     Button knopm;
     Button knopv;
     Button knopmll;
     Button knopvll;
 
-    int man;
-    int vrouw;
-    int manl;
-    int vrouwl;
-    int totaal;
+    int man = 1;
+    int vrouw = 1;
+    int manl = 1;
+    int vrouwl = 1;
+    int totaal = 1;
 
 
     public void init() {
@@ -32,8 +32,13 @@ public class opdr82 extends Applet{
         knopm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                man++;
+                getGraphics().drawString("Man" + man, 50, 70
+                repaint();
 
 
             }
         });
+        add(knopm);
+    }
+}
