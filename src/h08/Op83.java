@@ -7,29 +7,46 @@ import java.awt.event.ActionListener;
 
 public class Op83 extends Applet{
 
-    Button bOk;
-    TextField tekstveld;
-    double uitkomst;
+    TextField tekst;
+    Button knop;
+    Label label;
+    double getal;
+    double btw;
 
-    public void init ();{
 
-        bOk = new Button("Uitkomst");
-        bOk.addActionListener(new Listener());
-        add(bOk);
-        add(tekstveld);
+    public void init(){
+        tekst = new TextField("",20);
+        label = new Label("getal");
+        add (label);
+        tekst.addActionListener(new tekstListener());
+        add (tekst);
+        knop = new Button("+ Btw");
+        knop.addActionListener(new knopListener());
+        btw = 1.21;
+        add (knop);
+
     }
 
     public void paint(Graphics g){
-        g.drawString("Uitkomst met BTW " + uitkomst, 50,75);
+        g.drawString("het getal is "+ getal * btw,50,60);
     }
 
-    public class Listener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-        String getal = tekstveld.getText();
-        double invoer = Double.parseDouble(getal);
-        uitkomst = invoer * 1.21;
-        repaint();
+
+    //enter functie
+    class tekstListener implements ActionListener {
+        public void actionPerformed(ActionEvent e){
+            //pak getal uit tekst
+            String s=tekst.getText();
+            getal = Double.parseDouble(s);
+            repaint();
+        }
+    }
+    //knop functie
+    class knopListener implements ActionListener {
+        public void actionPerformed(ActionEvent e){
+            String s=tekst.getText();
+            getal = Double.parseDouble(s);
+            repaint();
         }
     }
 }
